@@ -5,8 +5,20 @@ function validateSyntax() {
 
     // TODO: Write your validation logic here
         // Check if input starts with 'pet_' and followed by alphanumeric characters
+        
+        /* Regular expression pattern created to match "pet_" then alphanumeric characters */
+        let pattern = /^pet_\d\w/
 
-            document.getElementById('result').innerText = result;
+        /* regexp test method to check if the input match the pattern  */
+        if (pattern.test(input)) {
+            result = 'Valid Input 🟢'
+        }
+        else {
+            result = 'Invalid Input 🔴'
+        }
+        
+
+        document.getElementById('result').innerText = result;
 }
 
 
